@@ -39,7 +39,19 @@ It consists of a REST controller which can be used to search playlists by conten
 ### Entity Relationship Diagram (ERD)
 
 The entities have the following relationship:
-1) 
+
+1) **Contents** has a **Many-to-Many** relationship with **Videos**
+   - A Content can have one or more videos
+   - A Video can be associated to one or more contents
+2) **Contents** has a **Many-to-Many** relationship with **Prerolls**
+   - A Content can have one or more prerolls
+   - A Preroll can be associated to one or more contents
+3) **Prerolls** has a **Many-to-Many** relationship with **Videos**
+  - A Preroll can have one or more videos
+  - A Video can be associated to one or more prerolls
+4) **Videos** has a **Many-to-Many** relationship with **Countries**
+   - A Video can be associated to one or more countries
+   - A Aountry can be associated to one or more videos
 
 ![ERD](https://github.com/sorinvisan89/maretha/blob/main/images/erd.png)
 

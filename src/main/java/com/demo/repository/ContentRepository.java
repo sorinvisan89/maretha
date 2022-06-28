@@ -11,7 +11,7 @@ import java.util.Optional;
 
 public interface ContentRepository extends JpaRepository<ContentEntity, String> {
 
-    @Query("SELECT NEW com.example.demo.entity.VideoProjection(ve.videoId) FROM ContentEntity ce " +
+    @Query("SELECT NEW com.demo.entity.VideoProjection(ve.videoId) FROM ContentEntity ce " +
             "INNER JOIN ce.videos ve " +
             "INNER JOIN ve.countries c " +
             "WHERE ce.name = :name " +
