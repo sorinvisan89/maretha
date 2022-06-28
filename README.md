@@ -47,8 +47,8 @@ The entities have the following relationship:
    - A Content can have one or more prerolls
    - A Preroll can be associated to one or more contents
 3) **Prerolls** has a **Many-to-Many** relationship with **Videos**
-  - A Preroll can have one or more videos
-  - A Video can be associated to one or more prerolls
+    - A Preroll can have one or more videos
+   - A Video can be associated to one or more prerolls
 4) **Videos** has a **Many-to-Many** relationship with **Countries**
    - A Video can be associated to one or more countries
    - A Aountry can be associated to one or more videos
