@@ -25,6 +25,7 @@ public class VideoEntity {
 
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(name = "VIDEOS_COUNTRIES",
+            uniqueConstraints = @UniqueConstraint(columnNames={"VIDEO_ID", "COUNTRY_ID"}),
             joinColumns = @JoinColumn(name = "VIDEO_ID", referencedColumnName = "VIDEO_NAME"),
             inverseJoinColumns = @JoinColumn(name = "COUNTRY_ID", referencedColumnName = "COUNTRY_NAME")
     )

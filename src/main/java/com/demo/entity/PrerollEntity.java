@@ -20,6 +20,7 @@ public class PrerollEntity {
 
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(name = "PREROLL_VIDEOS",
+            uniqueConstraints = @UniqueConstraint(columnNames={"CONTENT_ID", "VIDEO_ID"}),
             joinColumns = @JoinColumn(name = "CONTENT_ID", referencedColumnName = "PREROLL_NAME"),
             inverseJoinColumns = @JoinColumn(name = "VIDEO_ID", referencedColumnName = "VIDEO_NAME")
     )
